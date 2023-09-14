@@ -1,4 +1,4 @@
-name: Elwalde Medical Equipments
+name: Deploy to Github Pages
 
 # Run workflow on every push to the master branch
 on:
