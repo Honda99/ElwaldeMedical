@@ -17,7 +17,6 @@ jobs:
     - name: Setup .NET Core SDK
       uses: actions/setup-dotnet@v1.6.0
       with:
-      # Optional SDK version(s) to use. If not provided, will install global.json version when available. Examples: 2.2.104, 3.1, 3.1.x, 3.x, 6.0.2xx
           dotnet-version: 3.1
                    
                  
@@ -27,7 +26,7 @@ jobs:
     - name: Publish .NET Core Project
       run: dotnet publish ElwaldeEquipment.csproj -c Release -o release --nologo
     
-    # changes the base-tag in index.html from '/' to 'BlazorGitHubPagesDemo' to match GitHub Pages repository subdirectory
+    # changes the base-tag in index.html from '/' to 'ElwaldeEquipment' to match GitHub Pages repository subdirectory
     - name: Change base-tag in index.html from / to ElwaldeEquipment
       run: sed -i 's/<base href="\/" \/>/<base href="\/ElwaldeEquipment\/" \/>/g' release/wwwroot/index.html
     
